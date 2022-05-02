@@ -10,22 +10,18 @@ class Peopletable extends React.Component {
         age:''
     }
     onChangeFirstName = e => {
-        console.log("infistnale");
         this.setState({ firstName: e.target.value });
       
     }
     onChangeLastName = e => {
-        console.log('lastname');
         this.setState({ lastName: e.target.value });
         
     }
     onChangeAge = e => {
-        console.log('age');
         this.setState({ age: e.target.value });
         
     }
     onAddClick = () => {
-        console.log('add');
         const { firstName, lastName, age, people } = this.state;
         const person = {
             firstName,
@@ -70,11 +66,11 @@ class Peopletable extends React.Component {
                     firstName={this.state.firstName}
                     lastName={this.state.lastName}
                     age={this.state.age}
-                    onAddClick={this.state.onAddClick}
-                    onClearClick={this.state.onClearClick}
-                    onChangeFirstName={this.state.onChangeFirstName}
-                    onChangeLastName={this.state.onChangeLastName}
-                    onChangeAge={this.state.onChangeAge}
+                    onAddClick={this.onAddClick}
+                    onClearClick={this.onClearClick}
+                    onChangeFirstName={this.onChangeFirstName}
+                    onChangeLastName={this.onChangeLastName}
+                    onChangeAge={this.onChangeAge}
                 />
                 {this.generateTable()}
             </div>    
